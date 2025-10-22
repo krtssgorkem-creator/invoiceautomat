@@ -36,9 +36,34 @@ export default function NewInvoice() {
     <div style={{ padding: 40 }}>
       <h1 style={{ fontSize: 24, fontWeight: 'bold', marginBottom: 20 }}>Yeni Fatura Oluştur</h1>
 
-      <input placeholder="Alıcı" value={buyer} onChange={(e) => setBuyer(e.target.value)} style={{ display: 'block', padding: 8, width: 300, marginBottom: 10 }} />
-      <input placeholder="Satıcı" value={seller} onChange={(e) => setSeller(e.target.value)} style={{ display: 'block', padding: 8, width: 300, marginBottom: 10 }} />
-      <input placeholder="Toplam Tutar" type="number" value={total} onChange={(e) => setTotal(e.target.value)} style={{ display: 'block', padding: 8, width: 300, marginBottom: 20 }} />
+      <input
+        placeholder="Alıcı"
+        value={buyer}
+        onChange={(e) => setBuyer(e.target.value)}
+        style={{ display: 'block', padding: 8, width: 300, marginBottom: 10 }}
+      />
+      <input
+        placeholder="Satıcı"
+        value={seller}
+        onChange={(e) => setSeller(e.target.value)}
+        style={{ display: 'block', padding: 8, width: 300, marginBottom: 10 }}
+      />
+      <input
+        placeholder="Toplam Tutar"
+        type="number"
+        value={total}
+        onChange={(e) => setTotal(e.target.value)}
+        style={{ display: 'block', padding: 8, width: 300, marginBottom: 20 }}
+      />
 
-      <button onClick={createInvoice} style={{ backgroundColor: '#16a34a', color: 'white', padding: 10, borderRadius: 5 }}>Fatura Oluştur</button>
-      {message && <p style={{ marginTop: 15 }}>{messa
+      <button
+        onClick={createInvoice}
+        style={{ backgroundColor: '#16a34a', color: 'white', padding: 10, borderRadius: 5 }}
+      >
+        Fatura Oluştur
+      </button>
+
+      {message && <p style={{ marginTop: 15 }}>{message}</p>}
+    </div>
+  )
+}
